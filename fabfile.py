@@ -16,9 +16,9 @@ Base configuration
 env.deployed_name = app_config.PROJECT_SLUG
 env.repo_name = app_config.REPOSITORY_NAME
 
-env.deploy_to_servers = True
+env.deploy_to_servers = False 
 env.install_crontab = False
-env.deploy_web_services = True
+env.deploy_web_services = False
 
 env.repo_url = 'git@github.com:nprapps/%(repo_name)s.git' % env
 env.alt_repo_url = None  # 'git@bitbucket.org:nprapps/%(repo_name)s.git' % env
@@ -120,7 +120,7 @@ def render():
     """
     from flask import g
 
-    update_copy()
+    #update_copy()
     less()
     jst()
 
