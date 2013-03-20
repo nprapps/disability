@@ -56,7 +56,6 @@ p {
 blockquote {
   font-family: georgia, serif;
   font-style: italic;
-  font-size: 2em;
   line-height: 1.4em;
   color: #77631b;
 }
@@ -195,16 +194,16 @@ article section figure {
   margin-right: -20px;
 }
 
-
-blockquote.wallpaper {
+.wallpaper {
   background: no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  padding: 10% 50% 10% 10%;
+}
+
+blockquote.wallpaper {
   margin: 0 -20px 1em;
-  color: #fff;
 }
 
 article figure img {
@@ -254,6 +253,29 @@ article footer {
   padding: 10px 20px;
   background: #444;
 }
+
+blockquote#sonny-ryan {
+  min-height: 300px;
+  position: relative;
+  color: #fff;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4em;
+  background-image: url(../img/sonny-ryan-32.jpg);
+  padding: 40px 50% 24px 40px;
+}
+
+blockquote#sonny-ryan p {
+  line-height: 1.4em;
+  margin: 0 0 0.75em;
+}
+
+blockquote#sonny-ryan .cp-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
 
 /* ==========================================================================
 Media Queries
@@ -383,20 +405,16 @@ article section .inline.wide {
     color: #51a09e;
   }
   aside.callout .ad-wrapper {
-    padding: 20px 20px 10px;
+    height: 290px;
+    padding: 20px 20px 0px;
     border-bottom: 1px solid #2C2C2C;
     font-family: helvetica, arial, sans-serif;
     font-size: .69em;
     background: #444;
-  }
-  aside.callout .ad-wrapper a.ad {
-    display: block;
-    width: 300px;
-    height: 250px;
+    overflow: hidden;
   }
   aside.callout .ad-wrapper p {
     float: left;
-    margin: 8px 0 0;
   }
   aside.callout .ad-wrapper p.right {
     float: right;
