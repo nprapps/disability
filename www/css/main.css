@@ -85,7 +85,7 @@ blockquote {
 #wrapper h2,
 #wrapper h3,
 #wrapper p.lead,
-#wrapper figcaption,
+#wrapper figure,
 #wrapper aside.callout .description {
   font-family: "adelle", arial, helvetica, 'Helvetica Neue', sans-serif;
 }
@@ -211,15 +211,23 @@ article figure img {
 }
 
 article section figure a.enlarge {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  float: right;
   color: #fff;
   font-size: 1em;
-  padding: 0.5em 0.75em;
+  padding: 0.5em 1em;
   background: #000;
-  background: rgba(0,0,0,0.8);
-  padding: 1px solid #fff;
+  margin-top: 0.5em;
+}
+
+article section figure figcaption a.enlarge {
+  float: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  background: #000;
 }
 
 article figure.three-up {
@@ -236,6 +244,10 @@ article figure.three-up img:first-child {
   margin-left: 0;
 }
 
+article section figure.infographic {
+  overflow: auto;
+}
+
 article section figure figcaption {
   padding: 1em 1.6em;
   background: #ccc;
@@ -243,8 +255,37 @@ article section figure figcaption {
   font-weight: 500;
 }
 
+article section figure .credit {
+  margin-top: 0.5em;
+  font-size: 0.75em;
+  line-height: 2em;
+  text-align: right;
+}
+
+article section figure figcaption .credit {
+  font-size: 0.8em;
+  text-align: left;
+}
+
+article section figure .credit {
+  margin: 0.5em 20px 0;
+}
+
+article section figure.inline.wide .credit {
+  float: right;
+  margin: 0.5em 20px 0;
+}
+
+article section figure.infographic figcaption {
+  position: relative;
+  margin-top: 1em;
+  border-top: 1px solid #ccc;
+  background: #eee;
+  padding-right: 6em;
+}
+
 article figure.three-up figcaption {
-  background: 0;
+  background: none;
   border-bottom: #ccc;
 }
 
@@ -318,6 +359,9 @@ article section .inline.wide {
   margin-left: -20px;
   margin-right: -20px;
 }
+article section figure .credit {
+  margin: 0.5em 0 0;
+}
 }
 
 @media only screen and (min-width: 800px) {
@@ -344,9 +388,16 @@ article section .inline.wide {
   article section figure a.enlarge {
     display: none;
   }
+  article section figure.infographic figcaption {
+    padding-right: 1.6em;
+  }
   article section .inline.wide {
     margin-left: -40px;
     margin-right: -40px;
+  }
+  article section figure.inline.wide .credit {
+    float: right;
+    margin: 0.5em 40px 0;
   }
   
   blockquote.wallpaper {
