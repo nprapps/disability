@@ -86,13 +86,16 @@ blockquote.right {
   color: #999;
 }
 
+
+section.byline,
+article header,
+article footer,
 .credit,
-#wrapper h1,
-#wrapper h2,
-#wrapper h3,
-#wrapper p.lead,
-#wrapper figure,
-#wrapper aside.callout .description {
+h3,
+p.lead,
+figcaption,
+.caption,
+aside.callout .description {
   font-family: "adelle", arial, helvetica, 'Helvetica Neue', sans-serif;
 }
 
@@ -158,7 +161,6 @@ aside.callout {
 
 article header {
   position: relative;
-  margin-bottom: 20px;
 }
 
 article header img {
@@ -168,7 +170,7 @@ article header img {
 
 article header h1 {
   font-size: 2.8em;
-  line-height: 1.4em;
+  line-height: 1.2em;
   margin: 0.5em 20px 0;
   padding: 0;
   color: #17807e;
@@ -177,14 +179,20 @@ article header h1 {
 article header h2 {
   font-size: 1.6em;
   line-height: 1.4em;
-  margin: 0 20px 1em;
+  margin: 0 20px 0;
   padding: 0;
   color: #51a09e;
 }
 
-
 article section {
   margin: 0 20px 4em;
+}
+
+article section.byline {
+  font-size: 1.2em;
+  line-height: 1.6em;
+  margin: 0 20px 1em;
+  color: #77631b;
 }
 
 article section h3 {
@@ -300,6 +308,12 @@ article section figure.inline.wide .credit {
   margin: 0.5em 20px 0;
 }
 
+.slideshow figure figcaption .credit,
+section .caption .credit {
+  float: right;
+  margin: 0;
+}
+
 article section figure.infographic figcaption {
   position: relative;
   margin-top: 1em;
@@ -308,42 +322,14 @@ article section figure.infographic figcaption {
   padding-right: 6em;
 }
 
-article figure.three-up figcaption {
-  background: none;
-  border-bottom: #ccc;
-}
-
 article footer {
   color: #ccc;
   padding: 10px 20px;
   background: #444;
 }
 
-blockquote#sonny-ryan {
-  min-height: 300px;
-  position: relative;
-  color: #fff;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.4em;
-  background-image: url(../img/sonny-ryan-32.jpg);
-  padding: 40px 50% 24px 40px;
-}
-
-blockquote#sonny-ryan p {
-  line-height: 1.4em;
-  margin: 0 0 0.75em;
-}
-
-blockquote#sonny-ryan .cp-container {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-h3#hale-county {
+h3.wallpaper {
   font-size: 4em;
-  background-image: url(../img/hale-county-bus-152.jpg);
   padding: 20% 0;
   color: #fff;
   text-shadow: 0px 0px 5px #999;
@@ -353,10 +339,44 @@ h3#hale-county {
   margin: 0 -20px;
 }
 
+h3#hale-county {
+  background-image: url(../img/hale-county-bus-152.jpg);
+}
+
+h3#dave-hoefler {
+  padding: 20% 5%;
+  background-image: url(../img/subhead-dave-hoefler.jpg);
+}
+
+h3#subhead-kids {
+  background-image: url(../img/jahleel-duroc-3.jpg);
+}
+
+h3#subhead-industrial-complex {
+  background-image: url(../img/subhead-disability-lawyers.jpg);
+}
+
+section .caption {
+  padding: 1em 0;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1em;
+}
+
 article figure #audio-ethel-thomas {
   position: absolute;
-  top: 20px;
+  top: 50%;
   left: 20px;
+}
+
+ul.slideshow {
+  margin: 0;
+  padding: 0;
+}
+
+ul.slideshow li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* ==========================================================================
@@ -369,7 +389,7 @@ Media Queries
 INTERMEDIATE: Menu
 ==================== */
 article header {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   max-height: 400px;
   overflow: hidden;
 }
@@ -440,6 +460,9 @@ article section figure .credit {
     clear: right;
     margin: 0 40px 4em;
   }
+  article section.byline {
+    margin: 0 40px 1em;
+  }
   article section h3 {
     font-size: 4em;
   }
@@ -457,9 +480,12 @@ article section figure .credit {
     float: right;
     margin: 0.5em 40px 0;
   }
+  h3.wallpaper {
+    margin: 0 -40px;
+  }
+  h3#subhead-kids,
   h3#hale-county {
     font-size: 6em;
-    margin: 0 -40px;
   }
   blockquote.wallpaper {
     margin: 0 -40px 1em;
