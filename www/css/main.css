@@ -251,10 +251,16 @@ article section figure {
 }
 
 html.backgroundsize .wallpaper {
+  background: center center fixed no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+@media only all and (max-device-width: 1024px) {
+  html.backgroundsize .wallpaper { 
+    background-attachment: scroll;
+  }
 }
 
 html.backgroundsize blockquote.wallpaper {
