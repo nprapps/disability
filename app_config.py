@@ -10,7 +10,7 @@ They will be exposed to users. Use environment variables instead.
 import os
 
 PROJECT_NAME = 'The Economics of Disability'
-PROJECT_SLUG = 'disability'
+PROJECT_SLUG = 'unfit-for-work'
 REPOSITORY_NAME = 'planetmoney-disability'
 
 PRODUCTION_S3_BUCKETS = ['apps.npr.org', 'apps2.npr.org']
