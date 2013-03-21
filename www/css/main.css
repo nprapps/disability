@@ -60,6 +60,11 @@ blockquote {
   color: #77631b;
 }
 
+blockquote.right {
+  font-size: 1.2em;
+  line-height: 1.8em;
+}
+
 .chromeframe {
   margin: 0.2em 0;
   background: #ccc;
@@ -81,6 +86,7 @@ blockquote {
   color: #999;
 }
 
+.credit,
 #wrapper h1,
 #wrapper h2,
 #wrapper h3,
@@ -161,17 +167,27 @@ article header img {
 }
 
 article header h1 {
-  font-size: 2.2em;
+  font-size: 2.8em;
   line-height: 1.4em;
-  margin: 1em 20px 0;
+  margin: 0.5em 20px 0;
   padding: 0;
+  color: #17807e;
 }
+
+article header h2 {
+  font-size: 1.6em;
+  line-height: 1.4em;
+  margin: 0 20px 1em;
+  padding: 0;
+  color: #51a09e;
+}
+
 
 article section {
   margin: 0 20px 4em;
 }
 
-article section h2 {
+article section h3 {
   font-size: 2.4em;
   line-height: 1em;
   margin: 0.5em 0 0.25em;
@@ -204,6 +220,10 @@ article section figure {
 
 blockquote.wallpaper {
   margin: 0 -20px 1em;
+}
+
+article figure {
+  position: relative;
 }
 
 article figure img {
@@ -255,7 +275,7 @@ article section figure figcaption {
   font-weight: 500;
 }
 
-article section figure .credit {
+article section .credit {
   margin-top: 0.5em;
   font-size: 0.75em;
   line-height: 2em;
@@ -269,6 +289,10 @@ article section figure figcaption .credit {
 
 article section figure .credit {
   margin: 0.5em 20px 0;
+}
+
+article section figure figcaption .credit {
+  margin: 0.5em 0;
 }
 
 article section figure.inline.wide .credit {
@@ -317,6 +341,23 @@ blockquote#sonny-ryan .cp-container {
   right: 10px;
 }
 
+h3#hale-county {
+  font-size: 4em;
+  background-image: url(../img/hale-county-bus-152.jpg);
+  padding: 20% 0;
+  color: #fff;
+  text-shadow: 0px 0px 5px #999;
+  -moz-text-shadow: 0px 0px 5px #999;
+  -webkit-text-shadow: 0px 0px 5px #999;
+  text-align: center;
+  margin: 0 -20px;
+}
+
+article figure #audio-ethel-thomas {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
 
 /* ==========================================================================
 Media Queries
@@ -333,10 +374,26 @@ article header {
   overflow: hidden;
 }
 article header h1 {
-  font-size: 2em;
+  font-size: 3em;
   position: absolute;
   left: 20px;
   right: 20px;
+  top: 20px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  text-shadow: 0px 0px 5px #555;
+  -moz-text-shadow: 0px 0px 5px #555;
+  -webkit-text-shadow: 0px 0px 5px #555;
+}
+article header h2 {
+  line-height: 1.6em;
+  font-size: 2em;
+  position: absolute;
+  font-weight: 400;
+  left: 40px;
+  right: 40px;
   bottom: 20px;
   text-align: center;
   margin: 0;
@@ -372,17 +429,18 @@ article section figure .credit {
     height: 400px;
   }
   article header h1 {
-    font-size: 2.5em;
     left: 40px;
-    bottom: 40px;
+    right: 40px;
+    top: 20px;
   }
   nav li.secondary {
     display: block;
   }
   article section {
+    clear: right;
     margin: 0 40px 4em;
   }
-  article section h2 {
+  article section h3 {
     font-size: 4em;
   }
   article section figure a.enlarge {
@@ -399,7 +457,10 @@ article section figure .credit {
     float: right;
     margin: 0.5em 40px 0;
   }
-  
+  h3#hale-county {
+    font-size: 6em;
+    margin: 0 -40px;
+  }
   blockquote.wallpaper {
     margin: 0 -40px 1em;
   }
@@ -415,6 +476,10 @@ article section figure .credit {
   }
   article section .right.narrow {
     width: 36%;
+  }
+  article section .right.medium {
+    width: 50%;
+    margin: 0 0 1em 2em;
   }
   article section .right.wide {
     width: 60%;
@@ -435,7 +500,7 @@ article section figure .credit {
     max-height: 500px;
   }
   article header h1 {
-    font-size: 2.8em;
+    font-size: 4em;
     left: 40px;
     right: 40px;
     bottom: 40px;

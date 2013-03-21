@@ -40,15 +40,24 @@ $(document).ready(function() {
     el.addEventListener("transitionend", centerImage, false); // FF event
     el.addEventListener("oTransitionEnd", centerImage, false); // Opera event
   }
+  
+  $('figure.infographic').each(function(){
+    var $figure = $(this),
+    $img = $figure.find('img'),
+    src = $img.attr('src').replace('img/', ''),
+    $enlarge = $('<a/>').text('Enlarge').addClass('enlarge').attr('href', 'enlarge.html#'+src);    
+    $figure.append($enlarge);
+  });
 
   $(".video-wrapper").fitVids();
+  
   if (isDesktopRetina()) {
     var $images = $('img.retina').each(function(i){
       var $img = $(this),
       src = $img.attr('src'),
       retinaSrc = src.replace(/\.\w+$/, function(match) { return "@2x" + match; }),
       preload = $('<img/>').attr('src', src).load(function(){
-        //$img.attr('src', retinaSrc).addClass('processed');
+        $img.attr('src', retinaSrc).addClass('processed');
       });
     });
   }
