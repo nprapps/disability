@@ -10,6 +10,10 @@ textarea {
   color: #222;
 }
 
+iframe {
+  border: none;
+}
+
 body {
   background: #fff;
   font: 1em/1.6em arial, helvetica, 'Helvetica Neue', sans-serif;
@@ -103,6 +107,34 @@ aside.callout .description {
   float: left;
   margin: 0;
   padding: 0 0 0 10px;
+}
+
+#globalheader ul.social-links {
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
+#globalheader ul.social-links li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  border-left: 1px solid #2C2C2C;
+}
+
+#globalheader ul.social-links li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-indent: -999em;
+  overflow: hidden;
+  display: block;
+  background: url(../img/social-icons.png) no-repeat 0 0;
+}
+
+#globalheader ul.social-links li.twitter a {
+  background-position: 0 -40px;
 }
 
 #footer nav ul {
@@ -218,15 +250,14 @@ article section figure {
   margin-right: -20px;
 }
 
-.wallpaper {
-  background: no-repeat center center fixed; 
+html.backgroundsize .wallpaper {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-blockquote.wallpaper {
+html.backgroundsize blockquote.wallpaper {
   margin: 0 -20px 1em;
 }
 
@@ -284,6 +315,7 @@ article section figure figcaption {
 }
 
 article section .credit {
+  display: block;
   margin-top: 0.5em;
   font-size: 0.75em;
   line-height: 2em;
@@ -328,7 +360,7 @@ article footer {
   background: #444;
 }
 
-h3.wallpaper {
+html.backgroundsize h3.wallpaper {
   font-size: 4em;
   padding: 20% 0;
   color: #fff;
@@ -480,14 +512,14 @@ article section figure .credit {
     float: right;
     margin: 0.5em 40px 0;
   }
-  h3.wallpaper {
+  html.backgroundsize h3.wallpaper {
     margin: 0 -40px;
   }
   h3#subhead-kids,
   h3#hale-county {
     font-size: 6em;
   }
-  blockquote.wallpaper {
+  html.backgroundsize blockquote.wallpaper {
     margin: 0 -40px 1em;
   }
   article section .inline.narrow,
@@ -536,11 +568,12 @@ article section figure .credit {
     display: block;
     position: absolute;
     right: 0;
-    top: -40px;
-    height: 540px;
+    top: 0;
+    height: 499px;
     width: 340px;
     background: #333;
     color: #ccc;
+    border-top: 1px solid #2C2C2C;
     border-left: 1px solid #2C2C2C;
   }
   aside.callout a {
@@ -721,121 +754,4 @@ Print styles
   h3 {
     page-break-after: avoid;
   }
-}
-
-.cp-container {
-  position: relative;
-  width: 104px;
-  height: 104px;
-  padding: 10px;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-.cp-container :focus {
-  border: none;
-  outline: 0;
-}
-
-.cp-buffer-1,
-.cp-buffer-2,
-.cp-progress-1,
-.cp-progress-2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 104px;
-  height: 104px;
-  clip:rect(0px,52px,104px,0px);
-}
-
-.cp-buffer-1,
-.cp-buffer-2 {
-}
-
-
-/* FALLBACK for .progress
-* (24 steps starting from 1hr filled progress, Decrease second value by 104px for next step)
-* (It needs the container selector to work. Or use div)
-*/
-/*
-.cp-container .cp-fallback {
-  background: url(../img/progress_sprite.jpg) no-repeat;
-  background-position: 0 104px; 
-}
-*/
-
-.cp-progress-1,
-.cp-progress-2 {
-  background: url(../img/progress-v2.png) 0 0 no-repeat;
-}
-
-.cp-buffer-holder,
-.cp-progress-holder,
-.cp-circle-control {
-  position: absolute;
-  width: 104px;
-  height: 104px;
-} 
-
-.cp-circle-control {
-  cursor: pointer;
-}
-
-.cp-buffer-holder,
-.cp-progress-holder {
-  clip: rect(0px,104px,104px,52px);
-  display: none;
-}
-
-
-/* This is needed when progress is greater than 50% or for fallback */
-
-.cp-buffer-holder.cp-gt50,
-.cp-progress-holder.cp-gt50,
-.cp-progress-1.cp-fallback{
-  clip: rect(auto, auto, auto, auto);
-}
-
-.cp-controls {
-  margin: 0;
-  padding: 26px;
-}
-
-.cp-controls li{
-  list-style-type: none;
-  display: block;
-
-  /*IE Fix*/
-  position: absolute;
-}
-
-.cp-controls li a{
-  position: relative;
-  display: block;
-  width: 50px;
-  height: 50px;
-  text-indent: -9999px;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.cp-controls .cp-play {
-  background: url(../img/controls-v2.png) 0 0 no-repeat;
-}
-
-.cp-controls .cp-play:hover {
-  background-position: -50px 0;
-}
-
-.cp-controls .cp-pause {
-  background: url(../img/controls-v2.png) 0 -50px no-repeat;
-}
-
-.cp-controls .cp-pause:hover {
-  background-position: -50px -50px;
-}
-
-.cp-jplayer {
-  width: 0;
-  height: 0;
 }
