@@ -406,6 +406,10 @@ article figure #audio-ethel-thomas {
   left: 20px;
 }
 
+#komo-video {
+  display: none;
+}
+
 ul.slideshow {
   margin: 0;
   padding: 0;
@@ -424,42 +428,42 @@ Media Queries
 @media only screen and (min-width: 480px) {
 
 /* ====================
-INTERMEDIATE: Menu
+INTERMEDIATE
 ==================== */
 article header {
   margin-bottom: 20px;
   max-height: 400px;
   overflow: hidden;
 }
-article header h1 {
-  font-size: 3em;
+article header .headline {
   position: absolute;
   left: 20px;
-  right: 20px;
   top: 20px;
-  text-align: center;
+  right: 20px;
+}
+article header h1 {
+  font-size: 4em;
+  line-height: 1em;
   margin: 0;
   padding: 0;
   color: #fff;
-  text-shadow: 0px 0px 5px #555;
-  -moz-text-shadow: 0px 0px 5px #555;
-  -webkit-text-shadow: 0px 0px 5px #555;
+  text-transform: uppercase;
+  margin-top: 0.6em;
 }
 article header h2 {
-  line-height: 1.6em;
-  font-size: 2em;
-  position: absolute;
-  font-weight: 400;
-  left: 40px;
-  right: 40px;
-  bottom: 20px;
-  text-align: center;
+  line-height: 1.4em;
+  font-size: 1.4em;
   margin: 0;
   padding: 0;
   color: #fff;
-  text-shadow: 0px 0px 5px #555;
-  -moz-text-shadow: 0px 0px 5px #555;
-  -webkit-text-shadow: 0px 0px 5px #555;
+  /*
+  text-shadow: 1px 1px 1px #fff;
+  -moz-text-shadow: 1px 1px 1px #fff;
+  -webkit-text-shadow: 1px 1px 1px #fff;
+  */
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 article section p.lead {
@@ -486,7 +490,7 @@ article section figure .credit {
   article header {
     height: 400px;
   }
-  article header h1 {
+  article header .headline {
     left: 40px;
     right: 40px;
     top: 20px;
@@ -552,6 +556,11 @@ article section figure .credit {
   article footer {
     padding: 20px 40px;
   }
+  #komo-video {
+    display: block;
+    width: 560px;
+    margin: 0 0 1em 2em;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -564,11 +573,10 @@ article section figure .credit {
     max-height: 500px;
   }
   article header h1 {
-    font-size: 4em;
-    left: 40px;
-    right: 40px;
-    bottom: 40px;
-    text-align: center;
+    font-size: 5em;
+  }
+  article header h2 {
+    font-size: 2em;
   }
   aside.callout {
     display: block;
