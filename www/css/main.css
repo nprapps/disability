@@ -628,6 +628,11 @@ article section figure .credit {
     width: 560px;
     margin: 0 0 1em 2em;
   }
+  @media only all and (max-device-width: 1024px) {
+    #komo-video {
+      display: none;
+    }
+  }
   .slideshow {
     margin: 0 0 1em;
   }
