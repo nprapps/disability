@@ -206,6 +206,9 @@ article header h1 {
   margin: 0.5em 20px 0;
   padding: 0;
   color: #17807e;
+  text-shadow: 1px 1px 2px #333;
+  -moz-text-shadow: 1px 1px 2px #333;
+  -webkit-text-shadow: 1px 1px 2px #333;
 }
 
 article header h2 {
@@ -214,6 +217,9 @@ article header h2 {
   margin: 0 20px 0;
   padding: 0;
   color: #51a09e;
+  text-shadow: 1px 1px 2px #333;
+  -moz-text-shadow: 1px 1px 2px #333;
+  -webkit-text-shadow: 1px 1px 2px #333;
 }
 
 article section {
@@ -273,6 +279,7 @@ article figure {
 
 article figure img {
   width: 100%;
+  height: auto;
 }
 
 article section figure a.enlarge {
@@ -352,6 +359,10 @@ section .caption .credit {
   margin: 0;
 }
 
+.slideshow figure figcaption .credit {
+  margin: 4px 0 2px 10px;
+}
+
 article section figure.infographic figcaption {
   position: relative;
   margin-top: 1em;
@@ -370,9 +381,9 @@ html.backgroundsize h3.wallpaper {
   font-size: 4em;
   padding: 20% 0;
   color: #fff;
-  text-shadow: 0px 0px 5px #999;
-  -moz-text-shadow: 0px 0px 5px #999;
-  -webkit-text-shadow: 0px 0px 5px #999;
+  text-shadow: 1px 1px 2px #333;
+  -moz-text-shadow: 1px 1px 2px #333;
+  -webkit-text-shadow: 1px 1px 2px #333;
   text-align: center;
   margin: 0 -20px;
 }
@@ -390,8 +401,22 @@ h3#subhead-kids {
   background-image: url(../img/jahleel-duroc-3.jpg);
 }
 
+h3#subhead-clinton {
+  padding: 15% 10%;
+  line-height: 1.2em;
+  background-image: url(../img/subhead-clinton.jpg);
+}
+
 h3#subhead-industrial-complex {
+  padding: 20% 5%;
   background-image: url(../img/subhead-disability-lawyers.jpg);
+}
+
+h3#subhead-can-you-think {
+  font-size: 3em;
+  line-height: 1.2em;
+  padding: 10% 5%;
+  background-image: url(../img/subhead-can-you-think.jpg);
 }
 
 section .caption {
@@ -410,15 +435,27 @@ article figure #audio-ethel-thomas {
   display: none;
 }
 
-ul.slideshow {
+.slideshow {
+  position: relative;
+}
+
+.slideshow ul {
   margin: 0;
   padding: 0;
 }
 
-ul.slideshow li {
-  list-style: none;
+.slideshow ul li {
   margin: 0;
   padding: 0;
+  list-style: none;
+}
+
+html.js .slideshow ul.slides li {
+  display: none;
+}
+
+html.js .slideshow ul.slides li:first-child {
+  display: block;
 }
 
 /* ==========================================================================
@@ -436,10 +473,16 @@ article header {
   overflow: hidden;
 }
 article header .headline {
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  right: 20px;
+  height: 360px;
+  padding: 20px;
+  background: url(../img/banner.jpg) center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+article header img {
+  display: none;
 }
 article header h1 {
   font-size: 4em;
@@ -448,7 +491,6 @@ article header h1 {
   padding: 0;
   color: #fff;
   text-transform: uppercase;
-  margin-top: 0.6em;
 }
 article header h2 {
   line-height: 1.4em;
@@ -456,14 +498,6 @@ article header h2 {
   margin: 0;
   padding: 0;
   color: #fff;
-  /*
-  text-shadow: 1px 1px 1px #fff;
-  -moz-text-shadow: 1px 1px 1px #fff;
-  -webkit-text-shadow: 1px 1px 1px #fff;
-  */
-  position: absolute;
-  left: 0;
-  top: 0;
 }
 
 article section p.lead {
@@ -491,9 +525,7 @@ article section figure .credit {
     height: 400px;
   }
   article header .headline {
-    left: 40px;
-    right: 40px;
-    top: 20px;
+
   }
   nav li.secondary {
     display: block;
@@ -572,6 +604,9 @@ article section figure .credit {
     height: 500px;
     max-height: 500px;
   }
+  article header .headline {
+    height: 460px;
+  }
   article header h1 {
     font-size: 5em;
   }
@@ -622,7 +657,7 @@ article section figure .credit {
     list-style: none;
     margin: 0 0 8px;
     padding: 0 0 0 20px;
-    background: url(../img/icon-listen.png) no-repeat 0 50%;
+    background: url(../img/icon-listen.png) no-repeat 0 5px;
   }
   aside.callout .description ul li a {
   }

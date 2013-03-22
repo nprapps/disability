@@ -31,7 +31,7 @@ $(document).ready(function() {
     }
     return false;
   };
-
+  /*
   $(window).on("load resize", centerImage);
 
   var el = document.getElementById('article-header');
@@ -40,6 +40,7 @@ $(document).ready(function() {
     el.addEventListener("transitionend", centerImage, false); // FF event
     el.addEventListener("oTransitionEnd", centerImage, false); // Opera event
   }
+  */
   
   $('figure.infographic').each(function(){
     var $figure = $(this),
