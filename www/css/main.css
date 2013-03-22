@@ -273,20 +273,6 @@ article section figure figcaption a.enlarge {
   background: #000;
 }
 
-article figure.three-up {
-  overflow: auto;
-}
-
-article figure.three-up img {
-  float: left;
-  width: 32%;
-  margin-left: 2%;
-}
-
-article figure.three-up img:first-child {
-  margin-left: 0;
-}
-
 article section figure.infographic {
   overflow: auto;
 }
@@ -379,6 +365,7 @@ h3#subhead-clinton {
 }
 
 h3#subhead-industrial-complex {
+  font-size: 3em;
   padding: 20% 5%;
   background-image: url(../img/subhead-disability-lawyers.jpg);
 }
@@ -407,6 +394,7 @@ article figure #audio-ethel-thomas {
 }
 
 .slideshow {
+  margin: 0 -20px 1em;
   position: relative;
 }
 
@@ -639,6 +627,9 @@ article section figure .credit {
     display: block;
     width: 560px;
     margin: 0 0 1em 2em;
+  }
+  .slideshow {
+    margin: 0 0 1em;
   }
 }
 
