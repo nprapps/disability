@@ -51,6 +51,7 @@ a {
   text-decoration: none;
 }
 
+.slideshow,
 blockquote,
 figure,
 p {
@@ -90,7 +91,7 @@ blockquote.right {
   color: #999;
 }
 
-
+html.js .slideshow ul.pager li a,
 section.byline,
 article header,
 article footer,
@@ -110,31 +111,7 @@ aside.callout .description {
 }
 
 #globalheader ul.social-links {
-  float: right;
-  margin: 0;
-  padding: 0;
-}
-
-#globalheader ul.social-links li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  float: left;
-  border-left: 1px solid #2C2C2C;
-}
-
-#globalheader ul.social-links li a {
-  display: block;
-  width: 40px;
-  height: 40px;
-  text-indent: -999em;
-  overflow: hidden;
-  display: block;
-  background: url(../img/social-icons.png) no-repeat 0 0;
-}
-
-#globalheader ul.social-links li.twitter a {
-  background-position: 0 -40px;
+  display: none;
 }
 
 #footer nav ul {
@@ -206,9 +183,6 @@ article header h1 {
   margin: 0.5em 20px 0;
   padding: 0;
   color: #17807e;
-  text-shadow: 1px 1px 2px #333;
-  -moz-text-shadow: 1px 1px 2px #333;
-  -webkit-text-shadow: 1px 1px 2px #333;
 }
 
 article header h2 {
@@ -217,9 +191,6 @@ article header h2 {
   margin: 0 20px 0;
   padding: 0;
   color: #51a09e;
-  text-shadow: 1px 1px 2px #333;
-  -moz-text-shadow: 1px 1px 2px #333;
-  -webkit-text-shadow: 1px 1px 2px #333;
 }
 
 article section {
@@ -454,9 +425,50 @@ html.js .slideshow ul.slides li {
   display: none;
 }
 
+html.js .slideshow ul li figure {
+  margin: 0;
+}
+
 html.js .slideshow ul.slides li:first-child {
   display: block;
 }
+
+html.js .slideshow ul.pager li a {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: 0 0 0;
+  padding: 0 14px;
+  width: 50%;
+  cursor: pointer;
+  color: #fff;
+  line-height: 60px;
+  font-size: 100px;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px #333;
+  -moz-text-shadow: 1px 1px 2px #333;
+  -webkit-text-shadow: 1px 1px 2px #333;
+  opacity: 0.5;
+  transition: opacity .1s ease-in-out;
+  -moz-transition: opacity .1s ease-in-out;
+  -webkit-transition: opacity .1s ease-in-out;
+}
+
+html.js .slideshow ul.pager li a.prev {
+  left: 0;
+  cursor: w-resize;
+}
+html.js .slideshow ul.pager li a.next {
+  right: 0;
+  cursor: e-resize;
+  text-align: right;
+}
+
+html.js .slideshow ul.pager li a:hover {
+  opacity: 1;
+}
+
 
 /* ==========================================================================
 Media Queries
@@ -467,6 +479,35 @@ Media Queries
 /* ====================
 INTERMEDIATE
 ==================== */
+
+#globalheader ul.social-links {
+  display: block;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
+#globalheader ul.social-links li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  border-left: 1px solid #2C2C2C;
+}
+
+#globalheader ul.social-links li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-indent: -999em;
+  overflow: hidden;
+  display: block;
+  background: url(../img/social-icons.png) no-repeat 0 0;
+}
+
+#globalheader ul.social-links li.twitter a {
+  background-position: 0 -40px;
+}
 article header {
   margin-bottom: 20px;
   max-height: 400px;
@@ -491,6 +532,9 @@ article header h1 {
   padding: 0;
   color: #fff;
   text-transform: uppercase;
+  text-shadow: 1px 1px 2px #333;
+  -moz-text-shadow: 1px 1px 2px #333;
+  -webkit-text-shadow: 1px 1px 2px #333;
 }
 article header h2 {
   line-height: 1.4em;
@@ -498,6 +542,9 @@ article header h2 {
   margin: 0;
   padding: 0;
   color: #fff;
+  text-shadow: 1px 1px 2px #333;
+  -moz-text-shadow: 1px 1px 2px #333;
+  -webkit-text-shadow: 1px 1px 2px #333;
 }
 
 article section p.lead {

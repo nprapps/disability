@@ -62,5 +62,35 @@ $(document).ready(function() {
       });
     });
   }
+  
+  $('.slideshow').each(function(){
+    var $wrapper = $(this),
+    $slideshow = $wrapper.find('ul.slides'),
+    $slides = $slideshow.find('li'),
+    max = $slides.length,
+    current = 0,
+    $pager = $('<ul>').addClass('pager'),
+    $prev = $('<a/>').attr('href', '#').addClass('prev').html('&laquo;').click(function(e){
+      e.preventDefault();
+      current--;
+      if (current < 0) {
+        current = max - 1;
+      }
+      $slides.hide();
+      $slides.eq(current).show();
+    }),
+    $next = $('<a/>').attr('href', '#').addClass('next').html('&raquo;').click(function(e){
+      e.preventDefault();
+      current++;
+      if (current >= max) {
+        current = 0;
+      }
+      $slides.hide();
+      $slides.eq(current).show();
+    });
+    $pager.append($('<li>').html($prev));
+    $pager.append($('<li>').html($next));
+    $wrapper.append($pager);
+  });
 
 });
