@@ -282,6 +282,7 @@ article section figure figcaption {
   background: #ccc;
   font-size: 0.85em;
   font-weight: 500;
+  overflow: auto;
 }
 
 article section .credit {
