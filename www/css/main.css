@@ -221,6 +221,11 @@ article section p.lead {
   line-height: 1.5em;
 }
 
+article section p.footnote {
+    font-size: 80%;
+    color: #666;
+}
+
 article section figure {
   position: relative;
   margin-left: -20px;
